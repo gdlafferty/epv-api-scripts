@@ -1,0 +1,27 @@
+[project]
+name = "epv-api-scripts-python"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "httpx>=0.28",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+    "respx>=0.21",
+    "mypy>=1.11",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "B", "I"]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
